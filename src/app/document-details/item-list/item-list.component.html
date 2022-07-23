@@ -1,0 +1,21 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th class="text-center" colspan="4">Document Items</th>
+    </tr>
+    <tr>
+      <th>Article</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+      <td>{{ codeToArticleName(item.article) }}</td>
+      <td>{{ item.price }}</td>
+      <td>{{ item.quantity }}</td>
+      <td>{{ item.price * item.quantity | number: "1.2-2" }}</td>
+    </tr>
+  </tbody>
+</table>
